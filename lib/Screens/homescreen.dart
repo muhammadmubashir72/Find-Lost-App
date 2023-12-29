@@ -64,28 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  // Future<void> fetchDataAndNavigate() async {
-  //   try {
-  //     // Fetch data from Firestore
-  //     QuerySnapshot querySnapshot =
-  //         await FirebaseFirestore.instance.collection('lost_items').get();
-  //
-  //     List<Map<String, dynamic>> data = querySnapshot.docs
-  //         .map((doc) => doc.data() as Map<String, dynamic>)
-  //         .toList();
-  //
-  //     // Navigate to the DisplayDataPage with the fetched data
-  //     Navigator.push(
-  //       context,
-  //       MaterialPageRoute(
-  //         builder: (context) => DisplayDataPage(data: data),
-  //       ),
-  //     );
-  //   } catch (e) {
-  //     showToast(message: 'Error fetching data: $e');
-  //   }
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -215,8 +193,8 @@ class _HomeScreenState extends State<HomeScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Logout'),
-          content: Text('Are you sure you want to logout?'),
+          title: Text('Logout',style: Theme.of(context).textTheme.titleLarge,),
+          content: Text('Are you sure you want to logout?',style: Theme.of(context).textTheme.titleMedium,),
           actions: [
             TextButton(
               onPressed: () {
@@ -226,7 +204,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         builder: (context) =>
                             const HomeScreen())); // Close the dialog
               },
-              child: Text('No'),
+              child: Text('No',style: Theme.of(context).textTheme.titleSmall,),
             ),
             TextButton(
               onPressed: () {
@@ -243,7 +221,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 // Add your logout logic here
                 // Navigator.pop(context); // Close the dialog
               },
-              child: Text('Yes'),
+              child: Text('Yes',style: Theme.of(context).textTheme.titleSmall,),
             ),
           ],
         );
@@ -276,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // print("Sign out your id");
             // showToast(message: "Successfully is signed out.");
           },
-          icon: Icon(Icons.notifications, color: Colors.black),
+          icon: Icon(Icons.notifications, color:Color(0xffb80924)),
         ),
       ],
     );
@@ -307,8 +285,6 @@ class _HomeScreenState extends State<HomeScreen> {
             DrawerHeader(
               child:  Image.asset(
                 "assets/images/icon.png",
-                // width: 200,
-                // height: 200,
               ),
             ),
             ListTile(
