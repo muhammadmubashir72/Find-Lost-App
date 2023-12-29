@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1062453414820",
+    "firebase_url": "https://find-lost-app-default-rtdb.firebaseio.com",
+    "project_id": "find-lost-app",
+    "storage_bucket": "find-lost-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062453414820:android:16d7ce4b4212fc1df20f31",
+        "android_client_info": {
+          "package_name": "com.example.find_lost_app.find_lost_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvEHy393C6AW_1TSi2SMaaZBwuQvx-Zrc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
